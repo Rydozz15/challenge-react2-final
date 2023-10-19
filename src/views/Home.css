@@ -1,0 +1,11 @@
+.hero {
+    background-image: url(../assets/imgs/background.webp);
+    background-position: center;
+    background-size: cover;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
