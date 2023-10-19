@@ -1,0 +1,33 @@
+.pizza-display {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid black;
+}
+.card img {
+    max-width: 100%;
+}
+.divider {
+    border-top: 3px dashed black;
+    width: 100%;
+    margin: 0;
+}
+.price {
+    font-size: xx-large;
+    align-self: center;
+}
+.buttons-card {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
