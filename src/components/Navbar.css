@@ -1,0 +1,22 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    background-color: chartreuse;
+}
+nav div {
+    display: flex;
+    flex-direction: row;
+}
+nav div h1 {
+    padding: 0 1rem;
+}
+nav div h2 {
+    padding-right: 1rem;
+}
+nav div img {
+    width: 50px;
+}
