@@ -9,6 +9,7 @@ const PizzaProvider = ({ children }) => {
     const [pizzas, setPizza] = useState(null);
     const [pizzaApi, setPizzaApi] = useState(API_PIZZA)
     const [pizzaCart,setPizzaCart] = useState([])
+    const [totalCartDisplay, setTotalCartDisplay] = useState(0)
 
     //Fetch
     useEffect(() => {
@@ -34,13 +35,7 @@ const PizzaProvider = ({ children }) => {
             cartMount(pizzas);
             console.log("Eureka")
             console.log(pizzaCart)
-            //Resultados
-            const example = () => {
-                let total = 0
-                pizzaCart.forEach((el) => {let result = el.price * el.quantity; total += result})
-                console.log(total)
-            } 
-            example()
+            
         }
       }, [pizzas]);
     
@@ -62,7 +57,7 @@ const PizzaProvider = ({ children }) => {
     }
 
     return (
-        <PizzaContext.Provider value={{ pizzas, setPizza, pizzaApi, setPizzaApi, pizzaCart, setPizzaCart }}>
+        <PizzaContext.Provider value={{ pizzas, setPizza, pizzaApi, setPizzaApi, pizzaCart, setPizzaCart, totalCartDisplay, setTotalCartDisplay }}>
             {children}
         </PizzaContext.Provider>
     );
