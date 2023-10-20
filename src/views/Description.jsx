@@ -3,7 +3,15 @@ import { PizzaContext } from "../context/PizzaContext"
 import "./Description.css"
 
 const Description = () =>{
-    const { pizzas } = useContext(PizzaContext)
+    const { pizzas, pizzaCart, setPizzaCart } = useContext(PizzaContext)
+
+    const addSubtractCart = (id) => {
+        const copyCart = [...pizzaCart]
+        let chosenIndex = copyCart.findIndex((el) => el.id == id)
+        pizzaCart[chosenIndex].quantity += 1
+        setPizzaCart(copyCart)
+    }
+
     return(
         <section className="pizza-description">
             {pizzas == null ? ""
@@ -20,7 +28,7 @@ const Description = () =>{
                             </ul>
                             <div className="price-section">
                                 <h1 className="price">Precio: {el.price}</h1>
-                                <button>
+                                <button onClick={() => addSubtractCart(el.id)}>
                                     Añadir
                                 </button>
                             </div>

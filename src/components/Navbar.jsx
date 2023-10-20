@@ -4,14 +4,7 @@ import logo from "../assets/imgs/logo.svg"
 import "./Navbar.css"
 
 const Navbar = () =>{
-    const { pizzas, pizzaCart, setPizzaCart, totalCartDisplay } = useContext(PizzaContext)
-    
-    const addSubtractCart = (id) => {
-        const copyCart = [...pizzaCart]
-        let chosenIndex = copyCart.findIndex((el) => el.id == id)
-        pizzaCart[chosenIndex].quantity += 1
-        setPizzaCart(copyCart)
-    }
+    const { pizzas, totalCartDisplay } = useContext(PizzaContext)
 
     return(
         <nav>
@@ -24,7 +17,6 @@ const Navbar = () =>{
                 {pizzas !== null ?
                 <h2>{totalCartDisplay}</h2>
                 : ""}
-                <button onClick={() => addSubtractCart("P002")}> Agregar</button>
             </div>
         </nav>
     )
