@@ -55,6 +55,18 @@ const PizzaProvider = ({ children }) => {
         })
         setPizzaCart(cart)
     }
+    
+    //Shopping cart Total (Calculator)
+    useEffect(() => {
+          calculator();
+          console.log("Se activó Shopping cart Total (Calculator)")
+    }, [pizzaCart]);
+
+    const calculator = () => {
+      let total = 0
+      pizzaCart.forEach((el) => {let result = el.price * el.quantity; total += result})
+      setTotalCartDisplay(total)
+  }
 
     return (
         <PizzaContext.Provider value={{ pizzas, setPizza, pizzaApi, setPizzaApi, pizzaCart, setPizzaCart, totalCartDisplay, setTotalCartDisplay }}>
