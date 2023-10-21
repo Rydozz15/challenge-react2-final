@@ -1,9 +1,10 @@
 import { useContext } from "react"
 import { PizzaContext } from "../context/PizzaContext"
+import { Link } from "react-router-dom"
 import "./Card.css"
 
 const Card = () =>{
-    const { pizzas } = useContext(PizzaContext)
+    const { pizzas, pizzaCart, setPizzaCart } = useContext(PizzaContext)
     const addCart = (id) => {
         const copyCart = [...pizzaCart]
         let chosenIndex = copyCart.findIndex((el) => el.id == id)
@@ -27,7 +28,7 @@ const Card = () =>{
                         <h1 className="price">{el.price}</h1>
                         <div className="buttons-card">
                             <button>
-                                Ver más
+                                <Link to={`/pizza/${el.name}`}>Ver más</Link>
                             </button>
                             <button onClick={() => addCart(el.id)}>
                                 Añadir
