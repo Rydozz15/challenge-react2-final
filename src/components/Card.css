@@ -54,6 +54,9 @@ button {
 .btn-more {
     background-color: cornflowerblue;
 }
+.btn-more a {
+    color: white;
+}
 .btn-add {
     background-color: crimson;
 }
