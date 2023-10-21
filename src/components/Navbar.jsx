@@ -14,7 +14,7 @@ const Navbar = () =>{
                 <h1>La Michi Pizzeria</h1>
             </div>
             <div>
-                <Link to={"/cart"}><h1>🛒: </h1> </Link>
+                <Link to={"/cart"}><h1 className="cart-icon">🛒</h1> </Link>
                 {pizzas !== null ?
                 <h2>{numberFormat(totalCartDisplay)}</h2>
                 : ""}
