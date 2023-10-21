@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { PizzaContext } from "../context/PizzaContext"
+import { PizzaContext, numberFormat } from "../context/PizzaContext"
 import "./ShoppingCart.css"
 
 const ShoppingCart = () =>{
-    const { pizzaCart, setPizzaCart } = useContext(PizzaContext)
+    const { pizzaCart, setPizzaCart, totalCartDisplay } = useContext(PizzaContext)
 
     const addSubtractCart = (id, action) => {
         const copyCart = [...pizzaCart]
@@ -29,7 +29,7 @@ const ShoppingCart = () =>{
                                 <h2>{el.product[0].toUpperCase()+el.product.substring(1)}</h2>
                             </div>
                             <div className="card-price">
-                                <h3 className="price">{el.price * el.quantity}</h3>
+                                <h3 className="price">{numberFormat(el.price * el.quantity)}</h3>
                                 <button onClick={() => addSubtractCart(el.id, "add")}>
                                         +
                                 </button>
@@ -41,6 +41,8 @@ const ShoppingCart = () =>{
                     </article>)}
                 return null}
                     )}
+        <h1>Total: {numberFormat(totalCartDisplay)}</h1>
+        <button>Ir a pagar</button>
         </section>
     )
 }

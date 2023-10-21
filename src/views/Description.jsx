@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { useParams } from "react-router-dom";
-import { PizzaContext } from "../context/PizzaContext"
+import { PizzaContext, numberFormat } from "../context/PizzaContext"
 import "./Description.css"
 
 const Description = () =>{
@@ -33,7 +33,7 @@ const Description = () =>{
                                     {el.ingredients.map((ingredient) => <li key={ingredient}>{ingredient[0].toUpperCase()+ingredient.substring(1)}</li>)}
                                 </ul>
                                 <div className="price-section">
-                                    <h1 className="price">Precio: {el.price}</h1>
+                                    <h1 className="price">Precio: {numberFormat(el.price)}</h1>
                                     <button onClick={() => addCart(el.id)}>
                                         Añadir
                                     </button>

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { PizzaContext } from "../context/PizzaContext"
+import { PizzaContext, numberFormat } from "../context/PizzaContext"
 import { Link } from "react-router-dom"
 import "./Card.css"
 
@@ -11,7 +11,6 @@ const Card = () =>{
         copyCart[chosenIndex].quantity += 1
         setPizzaCart(copyCart)
     }
-
     return(
         <section className="pizza-display">
             {pizzas == null ? ""
@@ -25,7 +24,7 @@ const Card = () =>{
                             {el.ingredients.map((ingredient) => <li key={ingredient}>{ingredient[0].toUpperCase()+ingredient.substring(1)}</li>)}
                         </ul>
                         <hr className="divider"/>
-                        <h1 className="price">{el.price}</h1>
+                        <h1 className="price">{numberFormat(el.price)}</h1>
                         <div className="buttons-card">
                             <button>
                                 <Link to={`/pizza/${el.name}`}>Ver más</Link>

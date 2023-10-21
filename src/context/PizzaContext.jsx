@@ -4,6 +4,11 @@ const API_PIZZA = "/pizzas.json";
 
 export const PizzaContext = createContext();
 
+export const numberFormat = (value) =>
+  new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP'
+  }).format(value);
 
 const PizzaProvider = ({ children }) => {
     const [pizzas, setPizza] = useState(null);
