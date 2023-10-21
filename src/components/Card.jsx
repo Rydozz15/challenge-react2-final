@@ -4,7 +4,13 @@ import "./Card.css"
 
 const Card = () =>{
     const { pizzas } = useContext(PizzaContext)
-    console.log(pizzas)
+    const addCart = (id) => {
+        const copyCart = [...pizzaCart]
+        let chosenIndex = copyCart.findIndex((el) => el.id == id)
+        copyCart[chosenIndex].quantity += 1
+        setPizzaCart(copyCart)
+    }
+
     return(
         <section className="pizza-display">
             {pizzas == null ? ""
@@ -23,7 +29,7 @@ const Card = () =>{
                             <button>
                                 Ver más
                             </button>
-                            <button>
+                            <button onClick={() => addCart(el.id)}>
                                 Añadir
                             </button>
                     </div>
