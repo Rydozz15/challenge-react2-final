@@ -44,3 +44,16 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+button {
+    color: white;
+    padding: 0.5rem;
+    font-size:1rem;
+    border: none;
+    border-radius: 30px;
+}
+.btn-more {
+    background-color: cornflowerblue;
+}
+.btn-add {
+    background-color: crimson;
+}

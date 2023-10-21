@@ -26,10 +26,10 @@ const Card = () =>{
                         <hr className="divider"/>
                         <h1 className="price">{numberFormat(el.price)}</h1>
                         <div className="buttons-card">
-                            <button>
+                            <button className="btn-more">
                                 <Link to={`/pizza/${el.name}`}>Ver más</Link>
                             </button>
-                            <button onClick={() => addCart(el.id)}>
+                            <button className="btn-add" onClick={() => addCart(el.id)}>
                                 Añadir
                             </button>
                     </div>
