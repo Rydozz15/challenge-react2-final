@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { PizzaContext } from "../context/PizzaContext"
 import logo from "../assets/imgs/logo.svg"
 import "./Navbar.css"
@@ -9,11 +10,11 @@ const Navbar = () =>{
     return(
         <nav>
             <div>
-                <img src={logo} alt="" />
+                <Link to={"/"}> <img src={logo} alt="Pizza Logo" /> </Link>
                 <h1>La Michi Pizzeria</h1>
             </div>
             <div>
-                <h1>🛒: </h1>
+                <Link to={"/cart"}><h1>🛒: </h1> </Link>
                 {pizzas !== null ?
                 <h2>{totalCartDisplay}</h2>
                 : ""}
