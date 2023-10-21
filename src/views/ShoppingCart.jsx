@@ -20,7 +20,9 @@ const ShoppingCart = () =>{
     return(
         <section className="shopping-description">
             {pizzaCart == [] ? ""
-                : pizzaCart.map((el) => 
+                : pizzaCart.map((el) => {
+                if (el.quantity > 0) {
+                    return (
                         <article className="card-shopping" key={el.id}>
                             <div className="card-product">
                                 <img src={el.image} alt="" />
@@ -36,7 +38,8 @@ const ShoppingCart = () =>{
                                     -
                                 </button>
                             </div>
-                    </article>
+                    </article>)}
+                return null}
                     )}
         </section>
     )
