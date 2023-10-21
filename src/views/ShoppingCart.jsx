@@ -30,19 +30,21 @@ const ShoppingCart = () =>{
                             </div>
                             <div className="card-price">
                                 <h3 className="price">{numberFormat(el.price * el.quantity)}</h3>
-                                <button onClick={() => addSubtractCart(el.id, "add")}>
+                                <button className="btn-add-cart" onClick={() => addSubtractCart(el.id, "add")}>
                                         +
                                 </button>
                                 <h2>{el.quantity}</h2>
-                                <button onClick={() => addSubtractCart(el.id, "sub")}>
+                                <button className="btn-sub-cart" onClick={() => addSubtractCart(el.id, "sub")}>
                                     -
                                 </button>
                             </div>
                     </article>)}
                 return null}
                     )}
-        <h1>Total: {numberFormat(totalCartDisplay)}</h1>
-        <button>Ir a pagar</button>
+            <aside>
+                <h1 className="total-text">Total: {numberFormat(totalCartDisplay)}</h1>
+                <button>Ir a pagar</button>
+            </aside>
         </section>
     )
 }
