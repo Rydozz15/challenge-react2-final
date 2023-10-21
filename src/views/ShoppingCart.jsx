@@ -26,7 +26,7 @@ const ShoppingCart = () =>{
                         <article className="card-shopping" key={el.id}>
                             <div className="card-product">
                                 <img src={el.image} alt="" />
-                                <h2>{el.product}</h2>
+                                <h2>{el.product[0].toUpperCase()+el.product.substring(1)}</h2>
                             </div>
                             <div className="card-price">
                                 <h3 className="price">{el.price * el.quantity}</h3>

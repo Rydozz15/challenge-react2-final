@@ -22,7 +22,7 @@ const Card = () =>{
                         <hr className="divider"/>
                         <h3>Ingredientes</h3>
                         <ul>
-                            {el.ingredients.map((ingredient) => <li key={ingredient}>{ingredient}</li>)}
+                            {el.ingredients.map((ingredient) => <li key={ingredient}>{ingredient[0].toUpperCase()+ingredient.substring(1)}</li>)}
                         </ul>
                         <hr className="divider"/>
                         <h1 className="price">{el.price}</h1>
