@@ -1,0 +1,30 @@
+.pizza-description{
+    margin-top: 70px;
+    padding: 1rem;
+}
+.card-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 229, 229);
+    padding: 0 1.2rem;
+    border-radius: 30px;
+}
+.card-description img {
+    max-width: 500px;
+    border-radius: 30px;
+    margin-right: 1.5rem;
+}
+.price-section {
+    display: flex;
+    justify-content: start;
+}
+.price-section h1 {
+    margin-right: 1rem;
+}
+.price-section button {
+    background-color: crimson;
+    padding: 0.8rem 1rem;
+    align-self: center;
+    font-size: larger;
+}
