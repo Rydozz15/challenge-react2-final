@@ -1,0 +1,22 @@
+.shopping-description {
+    margin-top: 70px;
+    padding: 1rem;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+}
+.card-shopping {
+    display: flex;
+    justify-content: space-between;
+}
+.card-product {
+    display: flex;
+    justify-content: space-between;
+}
+.card-product img {
+    width: 100px;
+}
+.card-price {
+    display: flex;
+    justify-content: space-between;
+}
