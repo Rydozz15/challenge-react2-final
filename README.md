@@ -1,8 +1,37 @@
-# React + Vite
+# Final Test - Course: React II | Academia Desafio Latam.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the project
+It's the final challenge to prove the student's learning outcome of the entire React course (Context API, Router Dom) through a coding exercise.
 
-Currently, two official plugins are available:
+### Objectives
+- Practice the use of Context API with an e-commerce paradigm and cart store logic.
+- Review the use of useParams, useNavigate and Link in React applications.
+- Review the use of the hooks useEffect, useState and Context.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+### Prerequisites
+- npm
+```
+npm install npm@latest -g
+```
+### Installation
+1. Clone the repo
+```
+git clone git@github.com:Rydozz15/challenge-react2-final.git
+```
+2. Install NPM packages
+```
+npm install
+```
+3. Run the App. Done!
+```
+npm run dev
+```
+
+## Usage
+It's a mock e-commerce. The main use is to surf through the pages and add items and review them in the cart section.
+That's it!
+
+## Future improvements
+1. Implement Typescript into the project.
+2. Implement Tailwind CSS to practice a job-standard tool, and maybe enhance the UI.
